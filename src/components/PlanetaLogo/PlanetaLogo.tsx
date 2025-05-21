@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Mesh } from "three";
 import * as THREE from "three";
-import { Text } from "@react-three/drei";
+
 
 const Planet: React.FC = () => {
   const meshRef = useRef<Mesh>(null);
@@ -28,8 +28,6 @@ const PlanetaLogo: React.FC = () => {
     <Canvas style={{ width: 140, height: 140 }} camera={{ position: [0, 0, 3], fov: 50 }}>
       <ambientLight intensity={0.6} />
       <directionalLight position={[5, 5, 5]} />
-
-
       <Planet />
     </Canvas>
   );
