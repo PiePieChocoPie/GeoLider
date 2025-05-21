@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.nameCompany {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-left: 12px; /* для отступа от логотипа */
+}
+
+.mainName {
+  font-size: 48px;
+  font-weight: 600;
+  color: #1a1a1a;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px; 
+}
+
+.mainName::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  background-color: currentColor; 
+}
+
+.subName {
+  font-size: 26px;
+  font-weight: 400;
+  color: #555;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.languageList {
+  display: flex; 
+  flex-direction: row;
+  gap: 8px;
+}
+
+.languageList button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  color: #333;
+}
+
+.languageList button:hover {
+  color: #007acc;
+}
+
+.activeLang {
+  font-weight: bold;
+  color: #007acc;
+}
+
+.authButtons button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #eee;
+  transition: background-color 0.3s ease;
+}
+
+.authButtons button:last-child {
+  margin-right: 0;
+}
+
+.authButtons button:hover {
+  background-color: #ccc;
+}
+
