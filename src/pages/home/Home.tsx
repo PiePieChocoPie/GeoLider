@@ -8,6 +8,7 @@ import ContactsSection from "./ContactsSection"
 import HomeSection from "./HomeSection"
 import styles from "./Home.module.css"
 import Header from "../Header/Header"
+import BannerCarousel from "../../components/BannerCarousel/BannerCarousel"
 import Footer from "../Footer/Footer"
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabKey>("home")
@@ -46,6 +47,7 @@ export default function Home() {
           </button>
         ))}
       </nav>
+      <BannerCarousel />
       <div className={styles.contentWrapper}>
         {renderSection()}
       </div>

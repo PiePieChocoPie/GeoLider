@@ -29,15 +29,6 @@ const PlanetaLogo: React.FC = () => {
       <ambientLight intensity={0.6} />
       <directionalLight position={[5, 5, 5]} />
 
-      <Text
-        position={[0, 0, 1.5]} // чуть ближе к камере, перед планетой
-        fontSize={1.8}           // размер буквы
-        color="#4A90E2"        // цвет буквы (синий)
-        anchorX="center"
-        anchorY="middle"
-      >
-        G
-      </Text>
 
       <Planet />
     </Canvas>
