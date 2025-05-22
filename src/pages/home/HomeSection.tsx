@@ -1,6 +1,10 @@
+import BannerCarousel from "../../components/BannerCarousel/BannerCarousel"
+
 export default function HomeSection() {
   return (
     <div>
+      <BannerCarousel />
+
       <h2>ООО “Геолидер” - группа IT-компаний, предоставляющая спектр услуг и решений для создания, модернизации и сопровождения программного обеспечения в нефтегазовой отрасли.</h2>
       
       <p>

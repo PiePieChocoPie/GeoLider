@@ -8,11 +8,19 @@ import ContactsSection from "./ContactsSection"
 import HomeSection from "./HomeSection"
 import styles from "./Home.module.css"
 import Header from "../Header/Header"
-import BannerCarousel from "../../components/BannerCarousel/BannerCarousel"
+import SupportModal from "../../components/Support/SupportModal"
+// import BannerCarousel from "../../components/BannerCarousel/BannerCarousel"
 import Footer from "../Footer/Footer"
 export default function Home() {
+  const [showSupportModal, setShowSupportModal] = useState(false)
   const [activeTab, setActiveTab] = useState<TabKey>("home")
-
+  const handleTabChange = (key: TabKey) => {
+    if (key === "contacts") {
+      setShowSupportModal(true)
+    } else {
+      setActiveTab(key)
+    }
+  }
   const renderSection = () => {
     switch (activeTab) {
       case "about":
@@ -31,27 +39,33 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className={styles.mainContent}>
       <div className={styles.headerWrapper}>
-        <Header/>
+        <Header />
       </div>
 
       <nav className={styles.nav}>
         {tabs.map(tab => (
           <button
             key={tab.key}
-            onClick={() => setActiveTab(tab.key)}
+            onClick={() => handleTabChange(tab.key)}
             className={`${styles.button} ${activeTab === tab.key ? styles.buttonActive : styles.buttonInactive}`}
           >
             {tab.label}
           </button>
         ))}
       </nav>
-      <BannerCarousel />
+
       <div className={styles.contentWrapper}>
         {renderSection()}
       </div>
-      <Footer/>
+
+      <Footer />
+
+      <SupportModal
+        isOpen={showSupportModal}
+        onClose={() => setShowSupportModal(false)}
+      />
     </div>
   )
 }
