@@ -36,10 +36,15 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   height: 320px;
   overflow: hidden;
 }
+.product-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 .product-block p {
   font-size: 16px;

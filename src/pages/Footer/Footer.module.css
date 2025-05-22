@@ -1,38 +1,36 @@
 .footer {
-  background-color: white;
+  position: relative;
+
   color: #fff;
-  padding: 20px 5%;
+  padding: 40px 20px 0;
   text-align: center;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-top: auto;
+  font-family: sans-serif;
 }
 
 .address {
-  margin-bottom: 10px;
-  color: black;
+  margin-bottom: 20px;
 }
 
 .emailLink {
-  color: black;
-  text-decoration: underline;
-}
-
-.privacyPolicy {
-  margin-top: 10px;
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
+  color: #4acaff;
+  text-decoration: none;
 }
 
 .scrollTop {
-  margin-top: 15px;
+  margin: 20px 0;
   cursor: pointer;
-  color: black;
+  color: #aaa;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.scrollTop:hover {
+  color: #fff;
 }
 
+
 .copyRight {
-  margin-top: 15px;
-  font-size: 12px;
-  color: black;
+  margin-top: -30px;
+  padding-bottom: 20px;
+  color: #555;
+  font-size: 14px;
 }
