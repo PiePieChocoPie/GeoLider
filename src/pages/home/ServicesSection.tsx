@@ -15,7 +15,7 @@ export default function ServicesSection() {
 
   return (
     <div className="products-section">
-      <h2 className="products-title">Наши продукты</h2>
+      <h2 className="products-title">Наши услуги</h2>
 
       <div className="products-grid">
         {Array.from({ length: contentBlocks.length / 2 }).map((_, index) => {
