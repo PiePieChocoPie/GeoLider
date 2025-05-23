@@ -18,10 +18,11 @@ export default function Header() {
         <div className={styles.logo}>
           <PlanetaLogo />
         </div>
-        <h1 className={styles.nameCompany}>
-          <span className={styles.mainName}>{translations[language].companyName}</span>
-          <span className={styles.subName}>{translations[language].companyGroup}</span>
-        </h1>
+<div className={styles.nameCompany}>
+  <span className={styles.mainName}>{translations[language].companyName}</span>
+  <span className={styles.subName}>{translations[language].companyGroup}</span>
+  <span className={styles.slogan}>Из недр земли — к звёздам</span>
+</div>
       </div>
 
       <div className={styles.rightGroup}>
