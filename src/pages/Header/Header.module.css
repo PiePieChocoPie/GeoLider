@@ -3,7 +3,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
 }
 
@@ -21,13 +20,13 @@
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  margin-left: 12px; /* для отступа от логотипа */
+  margin-left: 12px;
 }
 
 .mainName {
   font-size: 48px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: white;
   position: relative;
   display: inline-block;
   padding-bottom: 12px; 
@@ -46,7 +45,7 @@
 .subName {
   font-size: 26px;
   font-weight: 400;
-  color: #555;
+  color: white;
 }
 
 .rightGroup {
@@ -67,7 +66,7 @@
   cursor: pointer;
   font-size: 14px;
   padding: 4px 8px;
-  color: #333;
+  color: white;
 }
 
 .languageList button:hover {
@@ -82,11 +81,12 @@
 .authButtons button {
   padding: 6px 12px;
   margin-right: 10px;
-  cursor: pointer;
+    background: none;
   border: none;
-  border-radius: 4px;
-  background-color: #eee;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  color: white;
 }
 
 .authButtons button:last-child {
@@ -94,6 +94,6 @@
 }
 
 .authButtons button:hover {
-  background-color: #ccc;
+  color: #007acc;
 }
 

@@ -42,25 +42,28 @@ export default function Home() {
     <div className={styles.mainContent}>
       <div className={styles.headerWrapper}>
         <Header />
+        <nav className={styles.nav}>
+          {tabs.map(tab => (
+            <button
+              key={tab.key}
+              onClick={() => handleTabChange(tab.key)}
+              className={`${styles.button}`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </nav>
       </div>
 
-      <nav className={styles.nav}>
-        {tabs.map(tab => (
-          <button
-            key={tab.key}
-            onClick={() => handleTabChange(tab.key)}
-            className={`${styles.button} ${activeTab === tab.key ? styles.buttonActive : styles.buttonInactive}`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </nav>
+
 
       <div className={styles.contentWrapper}>
         {renderSection()}
       </div>
 
-      <Footer />
+      <div className={styles.footerWrapper}>
+        <Footer />
+      </div>
 
       <SupportModal
         isOpen={showSupportModal}
