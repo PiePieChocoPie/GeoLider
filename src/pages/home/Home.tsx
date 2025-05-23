@@ -54,23 +54,29 @@ export default function Home() {
           ))}
         </nav>
       </div>
-
-
-
+      <div className={styles.banner}>
+        <div className={styles.bannerOverlay}>
+          <h1 className={styles.bannerTitle}>Добро пожаловать в Geoleader</h1>
+          <p className={styles.bannerSubtitle}>Мы предоставляем лучшие геоинформационные решения</p>
+          <div className={styles.rockCanvas}>
+          </div>
+        </div>
+      </div>
+    
       <div className={styles.contentWrapper}>
         {renderSection()}
       </div>
 
-<div className={styles.footerWrapper}>
-  <footer className={styles.footer}>
-    <div className={styles.footerBottom}>
-        <p>625051 г. Тюмень, ул. Пермякова, д. 43а, 2 этаж</p>
-        <p>тел.: (495) 982-36-31</p>
-      <a href="#">Политика обработки персональных данных</a>
-      <p>© 2025 Geoleader</p>
+    <div className={styles.footerWrapper}>
+      <footer className={styles.footer}>
+        <div className={styles.footerBottom}>
+            <p>625051 г. Тюмень, ул. Пермякова, д. 43а, 2 этаж</p>
+            <p>тел.: (495) 982-36-31</p>
+          <a href="#">Политика обработки персональных данных</a>
+          <p>© 2025 Geoleader</p>
+        </div>
+      </footer>
     </div>
-  </footer>
-</div>
 
       <SupportModal
         isOpen={showSupportModal}
